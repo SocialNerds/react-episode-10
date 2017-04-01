@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './components/Hello';
+import store from './store';
+import TodoList from './components/TodoList';
 
-ReactDOM.render(<Hello name={name}/>, document.getElementById('app'))
+ReactDOM.render(<TodoList store={store}/>, document.getElementById('app'));
