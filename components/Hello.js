@@ -7,14 +7,17 @@ export default class Hello extends Component {
     this.state = {
       name: "Thanos",
     }
+
+    this.changeName = this.changeName.bind(this);
+  }
+
+  changeName(name) {
+    this.setState({
+      name
+    });
   }
 
   render() {
-    setTimeout(() => {
-      this.setState({
-        name: "John"
-      })
-    }, 1000);
-    return <h1>Hello, <Name name={this.state.name} /></h1>;
+    return <h1>Hello, <Name changeName={this.changeName} name={this.state.name} /></h1>;
   }
 }

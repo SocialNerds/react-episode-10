@@ -6,6 +6,9 @@ export default class Name extends Component {
   }
 
   render() {
+    setTimeout(() => {
+      this.props.changeName("John");
+    }, 1000);
     return <strong>{this.props.name}</strong>;
   }
 }
